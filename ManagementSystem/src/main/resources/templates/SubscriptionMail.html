@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Confirmation</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+<div class="container mt-5">
+    <div class="card">
+        <div class="card-header bg-primary text-white text-center">
+            <h1>Payment Confirmation</h1>
+        </div>
+        <div class="card-body">
+            <h2 class="card-title">Thank you for your payment, <span th:text="${name}"></span>!</h2>
+            <p class="card-text">This email confirms that we have received your payment for the <span th:text="${planType}"></span> subscription package.</p>
+            <ul class="list-group mb-3">
+                <li class="list-group-item">Subscription Package: <span th:text="${planType}"></span></li>
+                <li class="list-group-item">Price: $99/year</li>
+                <li class="list-group-item">Full Name: <span th:text="${name}"></span></li>
+                <li class="list-group-item">Email: <span th:text="${email}"></span></li>
+                <li class="list-group-item">Credit Card Number: 9704198526191432198</li>
+                <li class="list-group-item">Release  Date: 07/15</li>
+            </ul>
+            <p>If you have any questions or concerns, please contact our support team.</p>
+            <p>Best regards,</p>
+            <p>Your Company</p>
+        </div>
+        <div class="card-footer text-center text-muted">
+            <p>&copy; 2023 Your Company. All rights reserved.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
