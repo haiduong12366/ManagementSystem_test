@@ -15,9 +15,9 @@ import java.util.List;
 @NoArgsConstructor
 public class IssueDTO {
     private Long id;
-    @Column(columnDefinition = "nvarchar(255)")
+    @Column(columnDefinition = "varchar(255)")
     private String title;
-    @Column(columnDefinition = "nvarchar(255)")
+    @Column(columnDefinition = "varchar(255)")
     private String description;
     private String status;
     private Long projectId;

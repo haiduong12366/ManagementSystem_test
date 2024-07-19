@@ -1,26 +1,30 @@
 version: '3.1'
 
 services:
-  mysql:
-    image: mysql:8.0.32
-    restart: always
-    environment:
-      - MYSQL_DATABASE=managementsystem
-      - MYSQL_ROOT_PASSWORD=haiduong
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-    ports:
-      - '3306:3306'
-    expose:
-      - 3306
+#  mysql:
+#    container_name: mysql
+#    image: mysql:8.0.32
+#    environment:
+#      - MYSQL_DATABASE=managementsystem
+#      - MYSQL_ROOT_PASSWORD=haiduong
+#    volumes:
+#      - /var/run/docker.sock:/var/run/docker.sock
+#    ports:
+#      - '3306:3306'
+#    expose:
+#      - 3306
+#    restart: unless-stopped
+
 
   springboot:
+    container_name: springboot
     build:
       context: .
       dockerfile: Dockerfile
     ports:
       - "8080:8080"
-    restart: always
+    depends_on:
+      - kafka
 
 
 
