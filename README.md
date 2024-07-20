@@ -1,6 +1,5 @@
 Using java spring for backend, reactjs for frontend, kafka for send email, end databa postgresql in render 
 <div>
-<p>frontend link: </p>
-<a>https://main--haiduong.netlify.app</a>
-<p>backend link: </p><a>https://managementsystem-byje.onrender.com</a>
+<a href="https://main--haiduong.netlify.app">Frontend link</a>
+<a href="https://managementsystem-byje.onrender.com">Backend link</a>
 </div>
